@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="container">
+		<div class="col-md-3"></div>
+			<div class="col-md-6">
+
+				<h4>Sign Up</h4>
+				
+				<input type="text" placeholder='Enter Username' ng-model='username' class="form-control">
+				<br>
+				<input type="text" placeholder='Enter handle' ng-model='handle' class="form-control">
+				<br>
+				<input type="password" placeholder='Enter password' ng-model='password' class="form-control">
+				<br>
+				<button class="btn btn-primary" data-toggle="modal" data-target="#loginModal" ng-click='submitSignup()'>Sign Up</button>
+				<br>
+				<a href="/">already a member, Log in </a>
+
+			</div>
+		<div class="col-md-3"></div>
+
+
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div id="loginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Success</h4>
+      </div>
+      <div class="modal-body">
+         <div class="jumbotron text-center">You have successfully signed in click <a class="btn btn-success" data-dismiss="modal">here</a> to login</div>
+      </div>
+      
+
+  </div>
+</div>
