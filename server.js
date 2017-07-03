@@ -166,7 +166,7 @@ app.put('/users/signin', function(req, res, next) {
 });
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT, function() {
 
 	console.log('Server running at http://localhost:3000/');
 });
