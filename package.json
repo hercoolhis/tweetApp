@@ -1,0 +1,12 @@
+{
+  "name": "tweet-app007",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.0.2",
+    "express": "^3.4.8",
+    "jwt-simple": "^0.5.1",
+    "mongojs": "^2.4.0"
+    },
+  "private": "true"
+}
