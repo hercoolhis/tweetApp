@@ -2,28 +2,17 @@
 	<div class="row" style="margin-top : 50px; ">
 
 		
-		<div class="col-md-4" ng-hide='currentUser'>
-			<h4>Login</h4>
-			<br>
-			<input type="text" class="form-control" ng-model='username' placeholder='Username'/>
-			<br>
-			<input  class="form-control" type="password" ng-model='password' placeholder='Password'/>
-			<br>
-
-			<button class="btn btn-success"  ng-click='signIn()'>Login</button>
-			<br>
-			<a href="#/signup"> not a member? signup</a>
-		</div>
-
 		<div class="col-md-4" ng-show='currentUser'>
-			<h2>Welcome, {{currentUser}} </h2>
+			<h2 style="color : #fff;">Welcome, {{currentUser}} </h2>
 
-			<button class="btn btn-danger" ng-click='signOut()'>Log Out</button>
+			<a class="btn btn-danger" ng-click='signOut()'>Log Out</a>
 			
 		</div>
 		
 
 		<div class="col-md-8" style="background : rgb(245, 245, 245);" >
+
+			<a style="text-decoration : none; margin-right : 5px; " class="glyphicon glyphicon-refresh" ng-click='refreshTweets()'  href=""></a> <i class="fa fa-spinner fa-spin" style="font-size:24px" ng-show='loading'></i>
 
 			<div class="form-group" ng-show='currentUser' style="margin-bottom : 20px;">		  		
 		  		<input style="margin-bottom : 10px; margin-top : 20px" type="text" ng-model='newTweet' class="form-control" id="usr" placeholder="Whats on your mind">
@@ -33,8 +22,8 @@
 			<div class="well" style="text-align: justify; padding : 10px; margin-top : 10px "  ng-repeat="tweet in tweets | orderBy: '-created_at'">
 				<div class="row">
 					<div class="col-md-2"><img style="height : 70px; width : 70px; border-radius: 50px" src="img/mystery-man.png" > </div>
-					<div class="col-md-8" ><p style="margin-top : 0px; margin-bottom : 0px;   "> <strong style='font-size : 20px;' >{{tweet.username}}</strong> at <small>{{tweet.created_at}}</small></p> <h5 style="margin-top : 0px;">@{{tweet.handle}}</h5><p style=" margin-left : 20px; width : 100%; margin-bottom : 5px;"  >{{tweet.body}}  </p> <a style="text-decoration : none; margin-right : 5px; " class="glyphicon glyphicon-heart" ng-click='liketweet(tweet)'  href=""></a>{{tweet.likes}}</div>
-					<div class="col-md-2" ><a style="float:right;" class="btn btn-primary" ng-click='removeTweet(tweet)' >Delete</a></div>
+					<div class="col-md-8" ><p style="margin-top : 0px; margin-bottom : 0px;   "> <strong style='font-size : 20px;' >{{tweet.username}}</strong> <small>{{tweet.created_at | date:'medium'}}</small></p> <h5 style="margin-top : 0px;">@{{tweet.handle}}</h5><p style=" margin-left : 20px; width : 100%; margin-bottom : 5px; color : #000"  >{{tweet.body}}  </p> <a style="text-decoration : none; margin-right : 5px; " class="glyphicon glyphicon-heart" ng-click='liketweet(tweet)'  href=""></a>{{tweet.likes}}<a style="text-decoration : none; margin-right : 5px; "  href="glyphicon glyphicon-refresh"></a></div>
+					<div class="col-md-2" ><a style="float:right;" class="btn btn-primary" ng-show='tweet.canDelete' ng-click='removeTweet(tweet)' >Delete</a></div>
 					  
 				
 				</div>

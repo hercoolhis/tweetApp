@@ -2,23 +2,64 @@
 <html>
 <head>
 	<title>Tweet App</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
 
-	<script type="text/javascript" src="css/bootstrap/js/jquery.min.js"></script>
-	<script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
+    <base href="">
+	
+	
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src='js/angular-route.min.js'></script>
 	<script type="text/javascript" src='js/angular-cookies.js'></script>
 	<script type="text/javascript" src="js/app.js"></script>
 
+	<!-- CSS -->
+        <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500"> -->
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+
 
 </head>
 <body ng-app="NodeApp">
-<div class="container" >
-	<h1><a href="/"> Tweet App</a></h1>
-<div ng-view></div>
 
-</div>
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                
+					<div ng-view></div>
+
+				</div>
+			</div>	
+		</div>	
+
+
+<!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
 </body>
 
 <!-- company Email hi@creativitykills.co  -->

@@ -1,26 +1,64 @@
+
 <div class="row">
-	<div class="container">
-		<div class="col-md-3"></div>
-			<div class="col-md-6">
-
-				<h4>Sign Up</h4>
-				
-				<input type="text" placeholder='Enter Username' ng-model='username' class="form-control">
-				<br>
-				<input type="text" placeholder='Enter handle' ng-model='handle' class="form-control">
-				<br>
-				<input type="password" placeholder='Enter password' ng-model='password' class="form-control">
-				<br>
-				<button class="btn btn-primary" data-toggle="modal" data-target="#loginModal" ng-click='submitSignup()'>Sign Up</button>
-				<br>
-				<a href="/">already a member, Log in </a>
-
-			</div>
-		<div class="col-md-3"></div>
-
-
-	</div>
-</div>
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>TweetApp</strong> SignUp</h1>
+                            <div class="description">
+                            	<p>
+	                            	SignUp on TweetApp
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>Create TweetApp account</h3>
+                            		<p>Choose Username, handle and password :</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-user"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form"  class="login-form">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="text" name="form-username" ng-model='username' placeholder="Username..." class="form-username form-control" id="form-username">
+			                        </div>
+			                        <div class="form-group">
+			                    		<label class="sr-only" for="form-Handle">Handle</label>
+			                        	<input type="text" name="form-Handle" ng-model='handle' placeholder="Handle..." class="form-username form-control" id="form-Handle">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-password">Password</label>
+			                        	<input type="password" name="form-password" ng-model='password' placeholder="Password..." class="form-password form-control" id="form-password">
+			                        </div>
+			                        <button type="submit" ng-click='submitSignup()' class="btn">Sign Up!</button>
+			                    </form>
+		                    </div>
+                            <br>
+                            <a href="/">already a member, Log in </a>
+		                    
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 social-login">
+                        	<h3>...or login with:</h3>
+                        	<div class="social-login-buttons">
+	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
+	                        		<i class="fa fa-facebook"></i> Facebook
+	                        	</a>
+	                        	<a class="btn btn-link-1 btn-link-1-twitter" href="#">
+	                        		<i class="fa fa-twitter"></i> Twitter
+	                        	</a>
+	                        	<a class="btn btn-link-1 btn-link-1-google-plus" href="#">
+	                        		<i class="fa fa-google-plus"></i> Google Plus
+	                        	</a>
+                        	</div>
+                        </div>
+                    </div>
 
 
 <!-- Modal -->
@@ -39,4 +77,5 @@
       
 
   </div>
+</div>
 </div>

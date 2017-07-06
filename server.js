@@ -7,10 +7,13 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var mongojs = require('mongojs');
 var db = mongojs('mongodb://hercoolhis:larrydon007@ds139352.mlab.com:39352/mytweets', ['tweets', 'users']);
+var port = process.env.PORT || 3000; 
 
 var JWT_SECRET = 'larrydon007';
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.use(bodyParser.json());
 
 
@@ -165,8 +168,8 @@ app.put('/users/signin', function(req, res, next) {
 
 });
 
-
-app.listen(process.env.PORT, function() {
+//
+app.listen(port, function() {
 
 	console.log('Server running at http://localhost:3000/');
 });
